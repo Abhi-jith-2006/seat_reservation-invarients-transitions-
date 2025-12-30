@@ -1,0 +1,16 @@
+{
+  "name": "seat_reservation",
+  "version": "1.0.0",
+  "description": "At most one active reservation (RESERVED or CONFIRMED) can exist per seat.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "pg": "^8.16.3"
+  }
+}
