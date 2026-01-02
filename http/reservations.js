@@ -27,4 +27,16 @@ router.post('/:reservationId/confirm', async (req, res, next) => {
   }
 });
 
+const cancelReservation = require('../domain/cancelReservation');
+
+router.post('/:reservationId/cancel', async (req, res, next) => {
+  try {
+    await cancelReservation(req.params.reservationId);
+    res.status(200).json({ status: 'CANCELLED' });
+  } catch (err) {
+    next(err);
+  }
+});
+
+
 module.exports = router;
