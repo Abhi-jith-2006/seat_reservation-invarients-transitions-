@@ -13,3 +13,4 @@ CONFIRMED, CANCELLED, EXPIRED are terminal.
 - Reservations are never deleted
 - All state transitions are explicit
 - DB enforces the invariant
+# test
