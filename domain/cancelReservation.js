@@ -1,4 +1,5 @@
 const db = require('../db');
+const { InvalidTransitionError } = require('../errors/domainErrors');
 
 async function cancelReservation(reservationId) {
   const client = await db.getClient();
@@ -23,7 +24,7 @@ async function cancelReservation(reservationId) {
     const reservation = result.rows[0];
 
     if (reservation.status !== 'RESERVED') {
-      throw new Error('Reservation cannot be cancelled');
+      throw new InvalidTransitionError('Reservation cannot be cancelled');
     }
 
     await client.query(

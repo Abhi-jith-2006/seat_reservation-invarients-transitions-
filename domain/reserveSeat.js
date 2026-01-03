@@ -1,4 +1,5 @@
 const db = require('../db');
+const {ConflictError} = require('../errors/domainErrors');
 
 async function reserveSeat(userId, seatId) {
   const client = await db.getClient();
@@ -22,7 +23,7 @@ async function reserveSeat(userId, seatId) {
     await client.query('ROLLBACK');
 
     if (err.code === '23505') {
-      throw new Error('Seat already reserved');
+      throw new ConflictError('seat already reserved')
     }
 
     throw err;

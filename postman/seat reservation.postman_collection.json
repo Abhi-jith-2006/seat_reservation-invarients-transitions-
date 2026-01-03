@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "b6ddc6bd-7f3e-4b40-b9bb-bdbdbb3ee1c9",
+		"name": "seat reservation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42953253"
+	},
+	"item": [
+		{
+			"name": "reserve seat",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": \"BF814ED6-B2E2-4F8B-88F9-55E1F845F67D\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/reservations/10440aee-848c-4f15-a5c1-c3a270868101/reserve",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reservations",
+						"10440aee-848c-4f15-a5c1-c3a270868101",
+						"reserve"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reserve prereserved seat",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": \"B73869E7-FED3-4D4D-B240-8E3885151EB6\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/reservations/10440aee-848c-4f15-a5c1-c3a270868101/reserve",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reservations",
+						"10440aee-848c-4f15-a5c1-c3a270868101",
+						"reserve"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "confirm reservation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": \"BF814ED6-B2E2-4F8B-88F9-55E1F845F67D\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/reservations/3f7e1236-82b4-425c-b366-a64213eaecf7/confirm",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reservations",
+						"3f7e1236-82b4-425c-b366-a64213eaecf7",
+						"confirm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "confirm again",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/reservations/3f7e1236-82b4-425c-b366-a64213eaecf7/confirm",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reservations",
+						"3f7e1236-82b4-425c-b366-a64213eaecf7",
+						"confirm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cancel confirmation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/reservations/3f7e1236-82b4-425c-b366-a64213eaecf7/cancel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reservations",
+						"3f7e1236-82b4-425c-b366-a64213eaecf7",
+						"cancel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cancel reservation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/reservations/fe88525d-580f-4d8b-8243-a576df060871/cancel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reservations",
+						"fe88525d-580f-4d8b-8243-a576df060871",
+						"cancel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cancel cacelled",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/reservations/fe88525d-580f-4d8b-8243-a576df060871/cancel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reservations",
+						"fe88525d-580f-4d8b-8243-a576df060871",
+						"cancel"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
